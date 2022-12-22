@@ -13,15 +13,6 @@
     }
 }
 
-/* @keyframes animacioDiscografia {
-    from{
-        margin-top: 100%;
-    }
-    to{
-        margin-top: 0;
-    }
-} */
-
 html {
     min-height: 100%;
     position: relative;
@@ -131,15 +122,12 @@ main{
     justify-items: center;
     
 }
-/* #fotoGrup{
-    justify-content: center;
-    box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.15);
-} */
 
 .containerFoto{
     display: flex;
     background-image: url("../img/fons/2.jpg");
     justify-items: center;
+    /* Volem que cadascun de les alçades sigui el 100% de la pantalla */
     min-height: 100vh;
 }
 
@@ -149,12 +137,14 @@ main{
     justify-content: center;
     color: #bbbbbb;
     font-size: 24px;
+    /* Volem que cadascun de les alçades sigui el 100% de la pantalla */
     min-height: 100vh;
 }
 
 .containerTemes{
     display: flex;
     background-image: url("../img/fons/3.png");
+    /* Volem que cadascun de les alçades sigui el 100% de la pantalla */
     min-height: 100vh;
     
 }
@@ -162,6 +152,7 @@ main{
 .containerDiscografia{
     display: flex;
     background-image: url("../img/fons/4.jpg");
+    /* Volem que cadascun de les alçades sigui el 100% de la pantalla */
     min-height: 100vh;
 }
 
@@ -323,11 +314,6 @@ footer div {
         margin: 0;
     }
 
-    /* #fotoGrup{
-        max-width: 100%;
-        box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.15);
-    } */
-
     #textHistoria{
         padding: 0;
     }
@@ -369,4 +355,18 @@ footer div {
     footer {
         flex-direction: column;
     }
+
+    .containerFoto{
+        min-height: 59vh;
+    }
+    .containerHistoria{
+        min-height: 59vh;
+    }
+    .containerTemes{
+        min-height: 59vh;
+    }
+    .containerDiscografia{
+        min-height: 59vh;
+    }
+
 }

@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
-/* Aquí definim l'animació dels grups, simplement augmentem la mida */
+/* Aquí definim l'animació dels grups, simplement augmentem la mida i serà quan passem
+el ratolí per sobre */
 @keyframes animacioGrups{
     0%{
         transform:scale(1);
@@ -13,6 +14,7 @@
     }
 }
 
+/* Quan carreguem la plana hi ha una animació inicial del logo i el títol */
 @keyframes animacioTitolCapInicial{
     0%{
         transform:scale(0);
@@ -28,6 +30,7 @@
     }
 }
 
+/* Animació del títol que serà indefinida */
 @keyframes animacioTitolCap{
     0%{
         transform:scale(1);
@@ -80,7 +83,6 @@ header{
     align-items: center;
 }
 #titolCap{
-    
     animation-name: animacioTitolCap;
     animation-duration: 2s;
     animation-iteration-count: infinite;

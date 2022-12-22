@@ -16,17 +16,13 @@ var grup = grups.filter(x => x.nom === grupSel);
 let titol = document.getElementById('titolCap');
 titol.innerText = grup[0].nom;
 
-//imatge responsiva del grup
-//let contImg = document.getElementById('fotoGrup');
-//let img = document.createElement('img');
-//img.srcset = `./img/grups/petites/${grup[0].fotoGrup} 480w, ./img/grups/${grup[0].fotoGrup} 900w`;
-//img.sizes = "(max-width: 500px) 480px, 800px";
-//img.src = `./img/grups/${grup[0].fotoGrup}`;
-//contImg.append(img);
 
 //imatge responsiva del grup
+//--------------------------
+
 //fotogrup és un element <picture>
 let imatge = document.getElementById('fotoGrup');
+
 let origenPetit = document.createElement('source');
 let origenGran = document.createElement('source');
 let img = document.createElement('img');
@@ -34,9 +30,11 @@ let img = document.createElement('img');
 //Aquí definim la imatge per resolucons grans
 origenGran.media = "(min-width: 650px)";
 origenGran.srcset = `./img/grups/${grup[0].fotoGrup}`;
+
 //Aquí la imatge per resolucions més petites i dispositius mòbils
 origenPetit.media = "(min-width: 100px)";
 origenPetit.srcset = `./img/grups/petites/${grup[0].fotoGrup}`;
+
 //Aquí la imatge per defecte si no és ninguna de les opcions anteriors
 img.src = `./img/grups/${grup[0].fotoGrup}`;
 img.alt = grup[0].nom;
