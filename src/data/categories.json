@@ -1,0 +1,34 @@
+[
+    {   "id": "1",
+        "titulo": "Romàntiques",
+        "descripcion": "Música per somiar",
+        "img": "catRomantiques.jpg"
+    },
+
+    {   "id": "2",
+        "titulo": "Dance",
+        "descripcion": "Anem a deixar-ho tot i disfrutar",
+        "img": "catDance.jpg"
+    },
+    {   "id": "3",
+        "titulo": "Techno",
+        "descripcion": "Música electrònica per volar",
+        "img": "catTechno.jpg"
+    },
+    {   "id": "4",
+        "titulo": "Pop/Rock",
+        "descripcion": "Clàssics popularts per disfrutar amb tothom",
+        "img": "catPop.jpg"
+    },
+    {   "id": "5",
+        "titulo": "Concerts",
+        "descripcion": "Els millors concerts amb bons músics",
+        "img": "catConcert.jpg"
+    },
+    {   "id": "6",
+        "titulo": "Selecció d'autor",
+        "descripcion": "Aquí la meva selecció",
+        "img": "catAutor.jpg"
+}
+
+]

@@ -1,0 +1,26 @@
+{
+  "name": "music",
+  "source": "src/index.html",
+  "browserslist": "> 1%, last 5 versions, not dead",
+  "version": "1.0.0",
+  "description": "Recopilació de cançons",
+  "scripts": {
+    "start": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean parcel:build",
+    "parcel:dev": "parcel",
+    "parcel:build": "parcel build",
+    "clean": "rimraf dist .parcel-cache"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel": "latest",
+    "rimraf": "^3.0.2"
+  },
+  "author": "Jordi Font",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "libheif-js": "^1.13.0",
+    "swiper": "^8.4.5"
+  }
+}

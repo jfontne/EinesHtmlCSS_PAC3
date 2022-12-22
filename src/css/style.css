@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* Aquí definim l'animació dels grups, simplement augmentem la mida */
+@keyframes animacioGrups{
+    0%{
+        transform:scale(1);
+    }
+    80%{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes animacioTitolCapInicial{
+    0%{
+        transform:scale(0);
+    }
+    40%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    65%{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes animacioTitolCap{
+    0%{
+        transform:scale(1);
+    }
+    40%{
+        transform: scale(1.1);
+    }
+}
+
+
+html {
+    min-height: 100%;
+    position: relative;
+  }
+  h1{
+    font-family: 'Russo One', sans-serif;
+  }
+
+.general{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: black;
+    background-image: url('../img/fonsWeb.jpg');
+}
+
+header{
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #333333;
+    background-image: url('../img/fonsCap.jpg');
+    text-align: center;
+    box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.containerLogoTitol{
+    animation-name: animacioTitolCapInicial;
+    animation-duration: 2s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#titolCap{
+    
+    animation-name: animacioTitolCap;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+    color: white;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+#imatgeCap{
+    width: 100px;
+}
+#barraMenu{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+#menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.opcio{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Tractament dels links dins de la pàgina */
+a{
+    color: white;
+    text-decoration-line: none;
+}
+
+a:hover{
+    color: #888888;
+}
+.opcioActiva{
+    color: aqua;
+}
+
+
+main {
+    margin-top: 80px;
+    margin-bottom: 100px;
+} 
+
+#presentacio{
+    margin-top: 20px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #555555;
+    opacity: 0.8;
+}
+
+
+#grups{
+    margin-top: 20px;
+    margin-bottom: 20px;;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+.grup{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
+    height: 250px;
+    
+}
+
+/* Passem el ratolí per sobre i executa l'animació */
+.grup:hover{
+    animation: animacioGrups 1s;
+}
+
+.imgGrup{
+
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    /*fem un poligon*/
+    clip-path: polygon(0% 0%, 100% 0%,100% 100%, 50% 100%);
+   
+}
+
+.grup h1{
+    font-size: 18pt;
+    color: white;
+    text-align: center;
+}
+
+
+/*swipper*/
+.swiper {
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .swiper-wrapper{
+    height: 50vh;
+}
+
+.swiper-wrapper h1{
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    outline: none;
+  }
+  
+  div.swiper-button-next, div.swiper-button-prev {
+    top: 50%
+  }
+  .swiper-slide{
+    color: black;
+    width: 100%;
+  }
+
+  #presentacio{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2rem;
+  }
+
+.contingut{
+    
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    border-radius: 15px;
+    max-width: 950px;
+    color: #888888;
+    margin: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.contingut p{
+    font-size: 1.5rem;
+}
+
+.contingut h1{
+    font-size: 42px;
+}
+
+#containerCat{
+    padding-top: 80px;
+    margin: auto;
+}
+
+.llista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+
+.punt{
+    background-color: #555555;
+    margin: 10px;
+    display: block;
+    list-style-type: none;
+    width: 160px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+.puntActiu{
+    background-color: antiquewhite;
+    margin: 10px;
+    display: block;
+    list-style-type: none;
+    width: 160px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.puntTitol{
+    font-size: 0.8em;
+    color: black;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.miniatura{
+    border-radius: 5px;
+    height: 100px;
+    width: 150px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.descripcio{
+    text-align: left;
+    font-weight: 800;
+    font-size: 14pt;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.categoria{
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+    text-decoration-style:double;
+}
+
+
+footer{
+    background-color: #333333;
+    background-image: url(../img/fonsCap.jpg);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 100%;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 -8px 8px 0px rgba(0, 0, 0, 0.15);
+}
+#imatgePeu{
+    width: 100px;
+}
+
+footer div{
+    text-align: center;
+    flex: 1 1 auto;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 750px) {
+    header{
+        flex-direction: column;
+        height: 150px;
+        align-items: center;
+        justify-content: stretch;
+    }
+
+    #imatgeCap{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #titolCap{
+        color: white;
+        padding: 0px;
+        text-transform: uppercase;
+    }
+
+   
+    #menu{
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+    main{
+        margin-top: 150px;
+        margin-bottom: 250px;
+    }
+    .swiper {
+        height: 50vh;
+      
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+         outline: none;
+         visibility: hidden;
+      }
+      
+      div.swiper-button-next, div.swiper-button-prev {
+        top: 50%
+      }
+      .swiper-slide{
+        color: black;
+      }
+      .swiper-slide img{
+        width: 100%;
+      }
+      .contingut{
+        text-align: center;
+        font-size: 14px;
+        width: 100%;
+        padding: 0;
+      }
+      .swiper-wrapper h1{
+        font-size: 3rem;
+        text-align: center;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+}
+

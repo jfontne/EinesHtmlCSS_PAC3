@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+@keyframes animacioTitolCap{
+    0%{
+        transform:scale(1);
+    }
+    40%{
+        transform: scale(1.1);
+    }
+}
+
+/* @keyframes animacioDiscografia {
+    from{
+        margin-top: 100%;
+    }
+    to{
+        margin-top: 0;
+    }
+} */
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+h1{
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    font-size: 32pt;
+    color: white;
+  }
+  img{
+    border-radius: 25px;
+    max-width: 100%;
+  }
+
+a{
+    color: white;
+    text-decoration-line: none;
+}
+
+a:hover{
+    color: #888888;
+}
+.opcioActiva{
+    color: aqua;
+}
+
+.general {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: montserrat;
+}
+
+#cos {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    z-index: 10;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #333333;
+    background-image: url(../img/fonsCap.jpg);
+    text-align: center;
+    position: fixed;
+    box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.15);
+    font-family: 'Montserrat', sans-serif;
+}
+.containerLogoTitol{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#titolCap {
+    animation: animacioTitolCap 2s infinite;
+    color: white;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+#imatgeCap{
+    width: 100px;
+}
+
+#barraMenu {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.opcio {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main{
+
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    
+}
+/* #fotoGrup{
+    justify-content: center;
+    box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.15);
+} */
+
+.containerFoto{
+    display: flex;
+    background-image: url("../img/fons/2.jpg");
+    justify-items: center;
+    min-height: 100vh;
+}
+
+.containerHistoria{
+    display: flex;
+    background-image: url("../img/fons/1.jpg");
+    justify-content: center;
+    color: #bbbbbb;
+    font-size: 24px;
+    min-height: 100vh;
+}
+
+.containerTemes{
+    display: flex;
+    background-image: url("../img/fons/3.png");
+    min-height: 100vh;
+    
+}
+
+.containerDiscografia{
+    display: flex;
+    background-image: url("../img/fons/4.jpg");
+    min-height: 100vh;
+}
+
+#textHistoria{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.5rem;
+    padding: 30px;
+}
+
+#discografia ul{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+#discografia ul li{
+    /* animation: animacioDiscografia 2s; */
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 150px;
+    width: 150px;
+    opacity: 0.8;
+    background-image: url('../img/discVinil_trans.png');
+    background-position: center;
+    background-size:contain;
+}
+
+#discografia ul li h1{
+    margin-top: 55px;
+    color: #990000;
+    text-shadow: 0px 0px 1px white;
+    font-family: 'Russo One', sans-serif;
+    font-size: 16px;
+    height: 50px;
+}
+#discografia ul li p{
+    text-align: center;
+    color: white;
+    font-family: montserrat;
+    font-size: 12px;
+}
+
+.contingut{
+    margin: auto;
+    padding: 10px;
+}
+
+.containerSongs {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.song {
+    background-color: #555555;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.song .videoSong {
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 350px;
+}
+
+.dadesSong {
+    vertical-align: text-top;
+    padding: 10px;
+    max-width: 350px;
+    height: 100%;
+}
+
+.dadesSong ul li {
+    font-size: 0.9rem;
+    color: bisque;
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.dadesSong ul li p {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.dadesSong ul li a {
+    color: bisque;
+}
+
+
+.titolSong {
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+}
+
+footer {
+    background-color: #333333;
+    background-image: url(../img/fonsCap.jpg);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 100%;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 -8px 8px 0px rgba(0, 0, 0, 0.15);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#imatgePeu{
+    width: 100px;
+}
+
+footer div {
+    text-align: center;
+    flex: 1 1 auto;
+    padding-right: 20px;
+}
+
+/*Mòbil ------------*/
+
+@media screen and (max-width: 700px) {
+    header{
+        flex-direction: column;
+        height: 150px;
+        align-items: center;
+        justify-content: stretch;
+    }
+   
+    #imatgeCap{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+   
+    #titolCap{
+        color: white;
+        padding: 0px;
+        text-transform: uppercase;
+    }
+   
+    #menu{
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* #fotoGrup{
+        max-width: 100%;
+        box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.15);
+    } */
+
+    #textHistoria{
+        padding: 0;
+    }
+    
+    #containerCat {
+        margin: 0;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .puntCat {
+        width: 42%;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .puntActiu {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 85%;
+    }
+
+    .miniatura{
+        width: 90%;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    main{
+        margin-top: 150px;
+        margin-bottom: 250px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
