@@ -40,6 +40,15 @@ el ratolí per sobre */
     }
 }
 
+/* Animació de la imatge SVG que serà indefinida */
+@keyframes animacioSVG{
+    0%{
+        transform:scale(1);
+    }
+    40%{
+        transform: scale(1.1);
+    }
+}
 
 html {
     min-height: 100%;
@@ -322,6 +331,16 @@ footer{
     width: 100px;
 }
 
+#imatgePeu2{
+    width: 150px;
+}
+
+.svgImg{
+animation-name: animacioSVG;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+} 
+
 footer div{
     text-align: center;
     flex: 1 1 auto;
@@ -355,7 +374,7 @@ footer div{
     }
     main{
         margin-top: 150px;
-        margin-bottom: 250px;
+        margin-bottom: 350px;
     }
     .swiper {
         height: 50vh;
