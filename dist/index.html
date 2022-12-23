@@ -1,1 +1,110 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex"><link rel="icon" type="image/x-icon" href="/favicon.121bc70c.png"><title>MUSIC FOR THE MASSES</title><link rel="stylesheet" href="/index.95573c47.css"><script nomodule="" defer src="/index.486eb596.js"></script><script type="module" src="/index.56a1ca15.js"></script><script type="module" src="/index.39ebf6ca.js"></script><script src="/index.d5e564c9.js" nomodule="" defer></script></head><body class="general">  <header>  <div class="containerLogoTitol"> <a href="/index.html"><img id="imatgeCap" src="/logo.f563d8de.png"></a> <h1 id="titolCap">MUSIC FOR THE MASSES</h1> </div>  <nav id="barraMenu"> <ul id="menu"> <li class="opcio"><a class="opcioActiva" href="/index.html">INICI</a></li> <li class="opcio"><a href="/categories.html">CATEGORIES</a> </li>  </ul> </nav> </header>  <main id="container">   <div class="swiper">  <div id="contenidorSwiper" class="swiper-wrapper"> <div id="swiperText"></div>  </div>  <div class="swiper-pagination"></div>  <div class="swiper-button-prev"></div> <div class="swiper-button-next"></div>  <div class="swiper-scrollbar"></div> </div> <div id="presentacio"> <div class="contingut"> <p>Benviguts a "MUSIC FOR THE MASSES", aquest espai està dissenyat per disfrutar de la música, la selecció és completament personal, son temes que mica en mica s'han anat quedant en el meu record, espero que gaudiu molt de la tria. </p> </div> </div>  <div id="grups"></div> </main>  <footer> <div> <img class="svgImg" src="/disc.230bd553.svg" alt="svg image">  </div> <div> <ul class="llistaPeu"> <li><a href="/index.html">HOME</a></li> <li><a href="/categoria.html">CATEGORIES</a></li> <li><select name="grups" id="despGrups" class="despPeu"><option selected value="..">Grup</option></select></li> <li><select name="categories" id="despCat" class="despPeu"><option selected value="..">Categoria</option></select></li> </ul> </div> <div id="dretaPeu"> <ul class="llistaPeu"> <li>Music for the masses</li> <li>Jordi Font (c) 2022</li> </ul></div>  <a type="display: none" href="/categoria.html"></a> <a type="display: none" href="/grup.html"></a> </footer> </body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tema llicències, com que no ho tinc clar i no soc advocat, he preferit
+    no indexar la plana en els buscadors. -->
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="/favicon.8b2f57bf.png">
+
+    <title>MUSIC FOR THE MASSES</title>
+
+    <!-- Carreguem el fitxer style.css on hi ha tota la configuració CSS -->
+    <link rel="stylesheet" href="/index.c92073ef.css">
+
+    <!-- Tota la feina la realitzarà el fitxer app.js -->
+    <script src="/index.59a40e7a.js" defer=""></script> 
+
+</head>
+<body class="general">
+    <!-- Capçalera de la plana web -->
+    <header>
+        <!-- logo i titol en un mateix contaner -->
+        <div class="containerLogoTitol">
+            <a href="/index.html"><img id="imatgeCap" src="/logo.726d37a8.png"></a>
+            <h1 id="titolCap">MUSIC FOR THE MASSES</h1>
+        </div>    
+        <!-- Menú principal de la plana web -->
+        <nav id="barraMenu">
+            <ul id="menu">
+                <li class="opcio"><a class="opcioActiva" href="/index.html">INICI</a></li>
+                <li class="opcio"><a href="/categories.html">CATEGORIES</a> </li>
+                <!-- <li class="opcio"><a href="">ENLLAÇOS</a></li> -->
+            </ul> 
+        </nav>
+    </header>
+    
+    <!-- Contingut principal de la plana web -->
+    <main id="container">
+
+        <!-- Aquí trobem una eina que genera un slider trobat als repositoris npm -->
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div id="contenidorSwiper" class="swiper-wrapper">
+                <div id="swiperText"></div>
+            <!-- Slides -->
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        
+
+
+        <div id="presentacio">
+            <div class="contingut">
+                <p>Benviguts a "MUSIC FOR THE MASSES", aquest espai està dissenyat per disfrutar de la música, la selecció
+                és completament personal, son temes que mica en mica s'han anat quedant en el meu record, espero que gaudiu
+                molt de la tria.
+                </p>
+            </div>
+            </div>
+        
+        <!-- Aquí llistem els grups musicals des de javaScript -->
+        <div id="grups"></div>
+
+    </main>
+
+    <!-- Peu de pàgina -->
+    <footer>
+        <div>
+            <img class="svgImg" src="/disc.61e8a2ac.svg" alt="svg image"> 
+            <!-- <img id="imatgePeu" src="./img/logo.png"> -->
+        </div>
+        <div>            
+            <ul class="llistaPeu">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/categoria.html">CATEGORIES</a></li>
+                <li><select name="grups" id="despGrups" class="despPeu"><option selected="" value="..">Grup</option></select></li>
+                <li><select name="categories" id="despCat" class="despPeu"><option selected="" value="..">Categoria</option></select></li>
+            </ul>
+            
+        </div>
+        <div id="dretaPeu">
+            <ul class="llistaPeu">
+                <li>Music for the masses</li>
+                <li>Jordi Font (c) 2022</li>
+        </ul></div>
+
+        <!-- Curiositats de parcel: com que gaig referencia a la plana categoria.html i a grup.html 
+        mitjançant paràmetres per poder visualitzar la informació filtrada, parcel no detecta
+        aquestes planes i no les compilava, vaig estar moltes hores pensant que coi pasava i despres
+        de molts prova error vaig adonarme d'aquest error
+        Solució: crear dos links invisibles a aquestes pàgines, d'aquesta manera parcel dels nassos
+        no ha tingut més remei que compilarles. -->
+        <a type="display: none" href="/categoria.html"></a>
+        <a type="display: none" href="/grup.html"></a>
+    </footer>
+      
+</body>
+</html>

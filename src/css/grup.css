@@ -263,6 +263,7 @@ main{
 }
 
 footer {
+    margin-top: 20px;
     background-color: #333333;
     background-image: url(../img/fonsCap.jpg);
     color: white;
@@ -297,8 +298,8 @@ footer div {
     }
    
     #imatgeCap{
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
    
@@ -350,10 +351,11 @@ footer div {
 
     main{
         margin-top: 150px;
-        margin-bottom: 250px;
+        margin-bottom: 300px;
     }
 
     footer {
+        padding-top: 20px;
         flex-direction: column;
     }
 

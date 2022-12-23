@@ -275,6 +275,7 @@ main{
 }
 
 footer {
+    margin-top: 20px;
     background-color: #333333;
     background-image: url(../img/fonsCap.jpg);
     color: white;
@@ -311,8 +312,8 @@ altres retocs serien treure els paddings i marges per aprofitar millor els mòbi
     }
 
     #imatgeCap{
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
    
@@ -359,10 +360,11 @@ altres retocs serien treure els paddings i marges per aprofitar millor els mòbi
 
     main{
         margin-top: 150px;
-        margin-bottom: 250px;
+        margin-bottom: 300px;
     }
 
     footer {
+        padding-top: 20px;
         flex-direction: column;
     }
 }
