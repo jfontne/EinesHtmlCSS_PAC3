@@ -78,14 +78,22 @@
     <!-- Peu de pàgina -->
     <footer>
         <div>
-            <img id="imatgePeu" src="./img/logo.png">
+            <img class="svgImg" src="./img/disc.svg" alt="svg image"> 
+            <!-- <img id="imatgePeu" src="./img/logo.png"> -->
         </div>
-        <div>
-            <p>Music for the masses</p>
-            <p>Jordi Font (c) 2022</p>
+        <div>            
+            <ul class="llistaPeu">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./categoria.html">CATEGORIES</a></li>
+                <li><select name="grups" id="despGrups" class="despPeu"><option selected value="..">Grup</option></select></li>
+                <li><select name="categories" id="despCat" class="despPeu"><option selected value="..">Categoria</option></select></li>
+            </ul>
+            
         </div>
         <div id="dretaPeu">
-            <img class="svgImg" src="./img/disc.svg" alt="svg image"> 
+            <ul class="llistaPeu">
+                <li>Music for the masses</li>
+                <li>Jordi Font (c) 2022</li>
         </div>
 
         <!-- Curiositats de parcel: com que gaig referencia a la plana categoria.html i a grup.html 

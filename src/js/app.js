@@ -91,3 +91,34 @@ grups.forEach(grup =>{
   containerGrup.append(divGrup);
   
 });
+
+//Anem a omplir el desplegable dels grups en el peu de página
+
+var despGrups = document.getElementById('despGrups');
+
+grups.forEach(grup=>{
+  let opcio = document.createElement('option');
+  opcio.value = grup.nom;
+  opcio.text = grup.nom;
+  despGrups.append(opcio);
+});
+
+despGrups.addEventListener('change',event => {
+  location.href = `grup.html?grup=${event.target.value}`;
+});
+
+//Anem a omplir el desplegable de les categories en el peu de página
+
+var despCat = document.getElementById('despCat');
+
+categories.forEach(cat=>{
+  let opcio = document.createElement('option');
+  opcio.value = cat.titulo;
+  opcio.text = cat.titulo;
+  despCat.append(opcio);
+});
+
+despCat.addEventListener('change',event => {
+  let cat = categories.find(x => x.titulo === event.target.value);
+  location.href = `categoria.html?cat=${cat.id}`;
+});

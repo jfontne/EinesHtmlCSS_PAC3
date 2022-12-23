@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="40mm" width="40mm">
+    <circle cx="20mm" cy="20mm" r="15mm" style="fill: #000; stroke: #000; stroke-width: 1mm"></circle>
+    <circle cx="20mm" cy="20mm" r="5mm" style="fill: red; stroke: red; stroke-width: 1mm"></circle>
+    <circle cx="20mm" cy="20mm" r="15mm" style="stroke: #fff; stroke-width: .5mm; fill: none"></circle>
+    <circle cx="20mm" cy="20mm" r="1mm" style="stroke: #000; stroke-width: 1mm; fill: #000"></circle>
+</svg>
