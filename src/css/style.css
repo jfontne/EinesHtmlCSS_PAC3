@@ -331,9 +331,6 @@ footer{
     width: 100px;
 }
 
-#imatgePeu2{
-    width: 150px;
-}
 
 .svgImg{
 animation-name: animacioSVG;
@@ -349,10 +346,11 @@ footer div{
 
 .llistaPeu{
     list-style-type: none;
+    padding-left: 0;
 }
 
 .despPeu{
-    background-color: black;
+    background-color: transparent;
     color: white;
     border: none;
     font-family: 'Montserrat', sans-serif;
@@ -360,6 +358,11 @@ footer div{
     text-transform: uppercase;
     text-align: center;
     width: 200px;
+}
+
+.despPeu:hover{
+    cursor: pointer;
+    color: #888888;
 }
 
 @media screen and (max-width: 750px) {
@@ -424,6 +427,9 @@ footer div{
 
     footer{
         flex-direction: column;
+    }
+    footer div{
+        width: 100%;
     }
 }
 
