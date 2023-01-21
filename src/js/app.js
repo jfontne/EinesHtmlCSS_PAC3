@@ -5,18 +5,32 @@
  //Recuperem i guardem el contenidor Swiper on anirà l'slide
  const containerSlide = document.getElementById('contenidorSwiper');
 
+//anem a comprobar la resolució de la pantalla inicialment per veure quines
+//imatges de l'slide triarem
+var resolució = window.outerWidth;
+
+
 //Bucle per recòrrer totes les categories
 //Aquí la idea és crear un div per l'slide amb la imatge de fons i el títol 
 //de cadascuna de les categories 
 categories.forEach(categoria => {
+  var slide = document.createElement('div');
+  slide.className = "swiper-slide";
+  slide.id = categoria.id;
   
   //creem l'slide
-  let slide = document.createElement('div');
-  slide.className = "swiper-slide";
-  slide.style.backgroundImage = `url('img/${categoria.img}')`;
-  slide.style.backgroundPosition = 'center';
+  if(resolució>700){//Comprovem la resolució inicial del dispositiu
+    //Desktop
+    slide.style.backgroundImage = `url('img/slide/${categoria.img}')`;
+    slide.style.backgroundPosition = 'center';
+  }
+  else{
+    //Mobile
+    slide.style.backgroundImage = `url('img/slide/mobil/${categoria.img}')`;
+    slide.style.backgroundPosition = 'center';
+  }
 
-  //enllaç a la categoria corresponent
+   //enllaç a la categoria corresponent
   let link = document.createElement('a');
   link.href = `./categoria.html?cat=${categoria.id}`;
   link.innerHTML = `<H1>${categoria.titulo}</H1>`;
@@ -25,6 +39,25 @@ categories.forEach(categoria => {
   //Afegim l'slide al contenidor d'slides
   containerSlide.append(slide);
 
+});
+
+//Canviem la imatge de l'slide segon la resolució de la pantalla 
+window.addEventListener("resize", ()=>{
+  let res = window.outerWidth;    
+    categories.forEach(categoria => {
+    let slide = document.getElementById(categoria.id);
+    
+    if(res>700){
+      //Desktop
+      slide.style.backgroundImage = `url('img/slide/${categoria.img}')`;
+      slide.style.backgroundPosition = 'center';
+    }
+    else{
+      //Mobile
+      slide.style.backgroundImage = `url('img/slide/mobil/${categoria.img}')`;
+      slide.style.backgroundPosition = 'center';
+    }
+  });
 });
 
 //CONFIGURACIÓ DE L'SLIDE
@@ -43,10 +76,10 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 1,
-  autoplay: {
-    delay: 2500
+  //autoplay: {
+  //  delay: 2500
     //disableOnInteraction: false,
-  },
+  //},
 
   // If we need pagination
   pagination: {
@@ -77,8 +110,9 @@ grups.forEach(grup =>{
   let imgGrup =  document.createElement('img');
   let linkGrup = document.createElement('a');
   imgGrup.className = 'imgGrup';
-  imgGrup.src = `img/grups/${grup.fotoGrup}`;
+  imgGrup.srcset = `img/grups/miniatures/${grup.fotoGrup}`;
   imgGrup.alt = grup.nom;
+  imgGrup.loading="lazy";
 
   //el link a la plana grup.html li assignem un paràmetre grup.nom
   linkGrup.href = `grup.html?grup=${grup.nom}`;

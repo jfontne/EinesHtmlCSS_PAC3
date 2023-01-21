@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
 
 /* Aquí definim l'animació dels grups, simplement augmentem la mida i serà quan passem
 el ratolí per sobre */
@@ -64,7 +66,7 @@ html {
     margin: 0;
     font-family: 'Montserrat', sans-serif; 
     background-color: black;
-    background-image: url('../img/fonsWeb.jpg');
+    background-image: url('../img/fons/fonsWeb.jpg');
 }
 
 header{
@@ -79,7 +81,7 @@ header{
     padding: 0;
     margin: 0;
     background-color: #333333;
-    background-image: url('../img/fonsCap.jpg');
+    background-image: url('../img/fons/fonsCap.jpg');
     text-align: center;
     box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.15);
 }
@@ -195,7 +197,7 @@ main {
 /*swipper*/
 .swiper {
     display: flex;
-    height: 50vh;
+    height: 450px;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -230,7 +232,6 @@ main {
   }
 
 .contingut{
-    
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -318,7 +319,7 @@ main {
 footer{
     margin-top: 20px;
     background-color: #333333;
-    background-image: url(../img/fonsCap.jpg);
+    background-image: url('../img/fons/fonsCap.jpg');
     color: white;
     display: flex;
     flex-direction: row;
@@ -366,7 +367,7 @@ footer div{
     color: #888888;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 700px) {
     header{
         flex-direction: column;
         height: 150px;
@@ -396,7 +397,7 @@ footer div{
         margin-bottom: 350px;
     }
     .swiper {
-        height: 50vh;
+        height: 450px;
       
       }
       .swiper-button-next,

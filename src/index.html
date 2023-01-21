@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="Description" content="Pàgina web que és una selecció de temes musicals">
+    <meta name="Author" content="Jordi Font">
     <!-- Tema llicències, com que no ho tinc clar i no soc advocat, he preferit
     no indexar la plana en els buscadors. -->
     <meta name="robots" content="noindex">
@@ -14,7 +15,7 @@
 
     <!-- Carreguem el fitxer style.css on hi ha tota la configuració CSS -->
     <link rel="stylesheet" href="./css/style.css">
-
+    
     <!-- Tota la feina la realitzarà el fitxer app.js -->
     <script type="module" src="./js/app.js"></script> 
 
@@ -24,7 +25,7 @@
     <header>
         <!-- logo i titol en un mateix contaner -->
         <div class="containerLogoTitol">
-            <a href="./index.html"><img id="imatgeCap" src="./img/logo.png"></a>
+            <a href="./index.html"><img loading="lazy" width="100px" id="imatgeCap" src="./img/logo.png" alt="logotipo"></a>
             <h1 id="titolCap">MUSIC FOR THE MASSES</h1>
         </div>    
         <!-- Menú principal de la plana web -->
@@ -78,7 +79,7 @@
     <!-- Peu de pàgina -->
     <footer>
         <div>
-            <img class="svgImg" src="./img/disc.svg" alt="svg image"> 
+            <img loading="lazy" width="120px" class="svgImg" src="./img/disc.svg" alt="svg image"> 
             <!-- <img id="imatgePeu" src="./img/logo.png"> -->
         </div>
         <div>            

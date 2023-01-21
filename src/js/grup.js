@@ -2,7 +2,7 @@ import grups from '../data/grups.json' /*assert {type: "json"};*/
 import songs from '../data/songs.json' /*assert {type: "json"};*/
 
 const valores = window.location.search;
-console.log(valores);
+
 
 //recuperem els paràmetres enviats a la web
 const urlParams = new URLSearchParams(valores);
@@ -27,6 +27,7 @@ let origenPetit = document.createElement('source');
 let origenGran = document.createElement('source');
 let img = document.createElement('img');
 
+
 //Aquí definim la imatge per resolucons grans
 origenGran.media = "(min-width: 650px)";
 origenGran.srcset = `./img/grups/${grup[0].fotoGrup}`;
@@ -38,7 +39,7 @@ origenPetit.srcset = `./img/grups/petites/${grup[0].fotoGrup}`;
 //Aquí la imatge per defecte si no és ninguna de les opcions anteriors
 img.src = `./img/grups/${grup[0].fotoGrup}`;
 img.alt = grup[0].nom;
-
+img.loading = "lazy"
 //Ho afegim tot a l'elemet <picture>
 imatge.append(origenGran);
 imatge.append(origenPetit);
@@ -70,16 +71,25 @@ llistaCat.className = 'llista';
     const llista = document.createElement('ul');
     llista.className = "containerSongs";
     const songsCat = songs.filter(x => x.grupo === grup[0].nom);
-    console.log(songsCat);
     
-    //Bucle per llistar les cançons filtrades per categoria
+    //Bucle per llistar les cançons filtrades per grup
     songsCat.forEach(song =>{
         let single = document.createElement('li');
         single.id = single.id;
         single.className = "song";
         let video = document.createElement('div');
         video.className = "videoSong";
-        video.innerHTML = `<iframe src="${song.video}" title="${song.titulo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+       //Utilitzem srcdoc per especificar l'enllaç al video i la imatge predeterminada del video, així evitem carregar el video de l'iframe per defecte
+        //de youtube, només carrega la imatge predeterminada i l'enllaç al video, GENIAL!
+        video.innerHTML = `<iframe 
+                            src="${song.video}"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                                <a href=${song.video}><img src=https://img.youtube.com/vi/${song.idVideo}/hqdefault.jpg alt='${song.titulo}'><span>▶</span></a>"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="${song.titulo}"
+                           ></iframe>`
         let dades = document.createElement('div');
         dades.className = "dadesSong";
         let titolSong = document.createElement('H1');

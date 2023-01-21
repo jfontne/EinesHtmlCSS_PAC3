@@ -60,12 +60,12 @@ h1{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: black;
-    background-image: url(../img/fonsWeb.jpg);
+    background-image: url('../img/fons/fonsWeb.jpg');
 }
 
 #cos {
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 header {
@@ -79,7 +79,7 @@ header {
     padding: 0;
     margin: 0;
     background-color: #333333;
-    background-image: url(../img/fonsCap.jpg);
+    background-image: url('../img/fons/fonsCap.jpg');
     text-align: center;
     position: fixed;
     box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.15);
@@ -277,7 +277,7 @@ main{
 footer {
     margin-top: 20px;
     background-color: #333333;
-    background-image: url(../img/fonsCap.jpg);
+    background-image: url('../img/fons/fonsCap.jpg');
     color: white;
     display: flex;
     flex-direction: row;

@@ -65,7 +65,7 @@ header {
     padding: 0;
     margin: 0;
     background-color: #333333;
-    background-image: url(../img/fonsCap.jpg);
+    background-image: url(../img/fons/fonsCap.jpg);
     text-align: center;
     position: fixed;
     box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.15);
@@ -265,7 +265,7 @@ main{
 footer {
     margin-top: 20px;
     background-color: #333333;
-    background-image: url(../img/fonsCap.jpg);
+    background-image: url('../img/fons/fonsCap.jpg');
     color: white;
     display: flex;
     flex-direction: row;

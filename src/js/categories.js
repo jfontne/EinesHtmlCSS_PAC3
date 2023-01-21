@@ -12,9 +12,10 @@ llistaCat.className = 'llista';
 categories.forEach(categoria => {
 
     let img = document.createElement('img');
-    img.src = `img/${categoria.img}`;
+    img.src = `../img/categories/miniatures/${categoria.img}`;
     img.className = 'miniatura';
     img.alt = categoria.titulo;
+    img.loading = "lazy";
     
     let titolPuntCat = document.createElement('H1');
     titolPuntCat.innerText = categoria.titulo;
@@ -75,7 +76,17 @@ function procesaCat(event){
         single.className = "song";
         let video = document.createElement('div');
         video.className = "videoSong";
-        video.innerHTML = `<iframe src="${song.video}" title="${song.titulo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        //Utilitzem srcdoc per especificar l'enllaç al video i la imatge predeterminada del video, així evitem carregar el video de l'iframe per defecte
+        //de youtube, només carrega la imatge predeterminada i l'enllaç al video, GENIAL!
+        video.innerHTML = `<iframe 
+                            src="${song.video}"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                                <a href=${song.video}><img src=https://img.youtube.com/vi/${song.idVideo}/hqdefault.jpg alt='${song.titulo}'><span>▶</span></a>"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="${song.titulo}"
+                           ></iframe>`
         let dades = document.createElement('div');
         dades.className = "dadesSong";
 
