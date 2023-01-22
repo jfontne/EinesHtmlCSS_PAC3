@@ -333,55 +333,55 @@ altres retocs serien treure els paddings i marges per aprofitar millor els mòbi
         padding-right: 0px;
     }
 
+   
     #titolCap{
         color: white;
         padding: 0px;
         text-transform: uppercase;
     }
-
    
     #menu{
         flex-direction: row;
         padding: 0;
         margin: 0;
     }
-    .opcio{
-        font-size: 24px;
+    
+    #containerCat {
+        margin: 0;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
+        width: 100%;
     }
+
+    .puntCat {
+        width: 42%;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .puntActiu {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 85%;
+    }
+
+    .miniatura{
+        width: 90%;
+        height: 100px;
+        object-fit: cover;
+    }
+
     main{
-        margin-top: 160px;
-        margin-bottom: 400px;
+        margin-top: 150px;
+        margin-bottom: 300px;
     }
-    .swiper {
-        height: 450px;
-      
-      }
-      .swiper-button-next,
-      .swiper-button-prev {
-         outline: none;
-         visibility: hidden;
-      }
-      
-      div.swiper-button-next, div.swiper-button-prev {
-        top: 50%
-      }
-      .swiper-slide{
-        color: black;
-      }
-      .swiper-slide img{
-        width: 100%;
-      }
-      .contingut{
-        text-align: center;
-        font-size: 14px;
-        width: 100%;
-        padding: 0;
-      }
-      .swiper-wrapper h1{
-        font-size: 3rem;
-        text-align: center;
-        text-shadow: 1px 1px 2px black;
-    }
+
+
+
 
     footer{
         font-size: 24px;
