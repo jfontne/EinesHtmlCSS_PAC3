@@ -234,6 +234,7 @@ main{
     font-size: 1rem;
     color: aqua;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .song .videoSong {
@@ -264,13 +265,23 @@ main{
 }
 
 .dadesSong ul li a {
+    display: block;
+    width: 100%;
     color: bisque;
+    font-size: 24px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: gray;
+    margin-left: 0;
+    padding-top: 2.5%;
+    text-align: center;
 }
 
 
 .titolSong {
     color: white;
-    font-size: 1.2rem;
+    font-size: 24px;
     text-align: left;
 }
 
@@ -309,6 +320,11 @@ altres retocs serien treure els paddings i marges per aprofitar millor els mòbi
         height: 150px;
         align-items: center;
         justify-content: stretch;
+        background-image: url('../img/fons/mobil/fonsCap.jpg');
+    }
+
+    .general{
+        background-image: url('../img/fons/mobil/fonsWeb.jpg');
     }
 
     #imatgeCap{
@@ -316,55 +332,68 @@ altres retocs serien treure els paddings i marges per aprofitar millor els mòbi
         padding-right: 0px;
     }
 
-   
     #titolCap{
         color: white;
         padding: 0px;
         text-transform: uppercase;
     }
+
    
     #menu{
         flex-direction: row;
         padding: 0;
         margin: 0;
     }
-    
-    #containerCat {
-        margin: 0;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 0;
-        width: 100%;
+    .opcio{
+        font-size: 24px;
     }
-
-    .puntCat {
-        width: 42%;
-        margin-right: 5px;
-        margin-left: 5px;
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .puntActiu {
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-bottom: 10px;
-        width: 85%;
-    }
-
-    .miniatura{
-        width: 90%;
-        height: 100px;
-        object-fit: cover;
-    }
-
     main{
-        margin-top: 150px;
-        margin-bottom: 300px;
+        margin-top: 160px;
+        margin-bottom: 400px;
+    }
+    .swiper {
+        height: 450px;
+      
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+         outline: none;
+         visibility: hidden;
+      }
+      
+      div.swiper-button-next, div.swiper-button-prev {
+        top: 50%
+      }
+      .swiper-slide{
+        color: black;
+      }
+      .swiper-slide img{
+        width: 100%;
+      }
+      .contingut{
+        text-align: center;
+        font-size: 14px;
+        width: 100%;
+        padding: 0;
+      }
+      .swiper-wrapper h1{
+        font-size: 3rem;
+        text-align: center;
+        text-shadow: 1px 1px 2px black;
     }
 
-    footer {
+    footer{
+        font-size: 24px;
         padding-top: 20px;
         flex-direction: column;
+    }
+    footer div{
+        width: 100%;
+    }
+    .llistaPeu li{
+        padding-top: 15px;
+    }
+    .despPeu{
+        font-size: 24px;
     }
 }

@@ -15,9 +15,28 @@ var IdCat = urlParams.get('cat');
 //Filtrem la categoria per possar-hi el títol i la imatge de fons de la web
 var categoria = categories.filter(x => x.id === IdCat);
 
+//anem a comprobar la resolució de la pantalla inicialment per veure quines
+//imatges de l'slide triarem
+var resolució = window.outerWidth;
+
+
 //canvi imatge de fons canviant la propietat del CSS
 let element = document.getElementById('cos');
-element.style.backgroundImage = `url('img/categories/${categoria[0].img}'`;
+
+//imatge de fons segons resolució
+if(resolució>700){//Comprovem la resolució inicial del dispositiu
+    //Desktop
+    element.style.backgroundImage = `url('img/categories/${categoria[0].img}'`;
+  }
+  else{
+    //Mobile
+    element.style.backgroundImage = `url('img/slide/mobil/${categoria[0].img}'`;
+  }
+
+
+
+
+
 
 //Canviem el títol de la capçalera
 const titolCat = document.getElementById('titolCap');
@@ -76,9 +95,9 @@ llistaCat.className = 'llista';
         let creditos = `<li><b>Autors:</b> ${song.creditos}</li>`
         let album = `<li><b>Àlbum:</b> ${song.álbum} (${song.año})</li>`
         let descripcion = `<li><p><b>Comentari:</b></p> ${song.descripcion}</li>`
-        let webGrupo = `<li><b>Web:</b> <a href="${song.webGrupo}">${song.webGrupo}</a></li>`
+        let webGrupo = `<li><a href="${song.webGrupo}">web</a></li>`
         let categoria = `<li><p><b>Categoria:</b></p> ${song.categoria}</li>`
-        let wikipedia = `<li><b>Wiki:</b> <a href="${song.wikipedia}">anar-hi</a></li>`
+        let wikipedia = `<li><a href="${song.wikipedia}">Wikipedia</a></li>`
         let htmlDades =  creditos + album  + webGrupo  + wikipedia;
         dadesSong.innerHTML = htmlDades;
         

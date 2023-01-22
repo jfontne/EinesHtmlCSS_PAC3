@@ -120,6 +120,7 @@ header{
 .opcio{
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 18px;
 }
 
 /* Tractament dels links dins de la pàgina */
@@ -392,9 +393,12 @@ footer div{
         padding: 0;
         margin: 0;
     }
+    .opcio{
+        font-size: 24px;
+    }
     main{
-        margin-top: 150px;
-        margin-bottom: 350px;
+        margin-top: 160px;
+        margin-bottom: 500px;
     }
     .swiper {
         height: 450px;
@@ -428,11 +432,18 @@ footer div{
     }
 
     footer{
+        font-size: 24px;
         padding-top: 20px;
         flex-direction: column;
     }
     footer div{
         width: 100%;
+    }
+    .llistaPeu li{
+        padding-top: 15px;
+    }
+    .despPeu{
+        font-size: 24px;
     }
 }
 

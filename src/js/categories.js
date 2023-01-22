@@ -102,9 +102,9 @@ function procesaCat(event){
         let creditos = `<li><b>Autors:</b> ${song.creditos}</li>`
         let album = `<li><b>Àlbum:</b> ${song.álbum} (${song.año})</li>`
         let descripcion = `<li><p><b>Comentari:</b></p> ${song.descripcion}</li>`
-        let webGrupo = `<li><b>Web:</b> <a href="${song.webGrupo}">${song.webGrupo}</a></li>`
+        let webGrupo = `<li><a href="${song.webGrupo}">web</a></li>`
         let categoria = `<li><p><b>Categoria:</b></p> ${song.categoria}</li>`
-        let wikipedia = `<li><b>Wiki:</b> <a href="${song.wikipedia}">anar-hi</a></li>`
+        let wikipedia = `<li><a href="${song.wikipedia}">wikipedia</a></li>`
         let htmlDades =  creditos + album  + webGrupo  + wikipedia;
         dadesSong.innerHTML = htmlDades;
         
